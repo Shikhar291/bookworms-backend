@@ -16,7 +16,7 @@ const httpServer = createServer(app);
 const connectedUsers = {};
 
 const io = new Server(httpServer, {
-  cors: { origin: ["http://localhost:3000"] },
+  cors: { origin: ['https://bookworm25.herokuapp.com'] },
 });
 
 io.on("connection", (socket) => {
@@ -53,7 +53,7 @@ const stripe = require("stripe")(stripe_sk);
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000"],['https://bookworm25.herokuapp.com']
   })
 );
 
