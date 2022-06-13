@@ -80,7 +80,7 @@ app.post("/create-payment-intent", async (req, res) => {
 app.get("/", (req, resp) => {
   resp.send("home");
 });
-
-httpServer.listen(5000, () => {
+const port = process.env.PORT || 5000;
+httpServer.listen(port, () => {
   console.log("server started");
 });
